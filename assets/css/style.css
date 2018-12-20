@@ -1,0 +1,24 @@
+@font-face{
+    font-family: marlboro;
+    src: url(/assets/css/fonts/marlboro.woff);
+}
+@font-face{
+    font-family: quentincaps;
+    src: url(/assets/fonts/quentincaps.woff);
+}
+@font-face{
+    font-family: riogrande;
+    src: url(/assets/fonts/riogrande.woff);
+}
+h1{
+    font-family: quentincaps;
+}
+.current-word{
+    letter-spacing: 10px;
+    font-size: 25px;
+    color: blue;
+    font-weight: bold;
+}
+.lose{
+    color: red;
+}
