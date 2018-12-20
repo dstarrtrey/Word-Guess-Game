@@ -1,23 +1,47 @@
 @font-face{
     font-family: marlboro;
-    src: url(/assets/css/fonts/marlboro.woff);
+    src: url(../fonts/marlboro.woff);
 }
 @font-face{
     font-family: quentincaps;
-    src: url(/assets/fonts/quentincaps.woff);
+    src: url(../fonts/quentincaps.woff);
 }
 @font-face{
     font-family: riogrande;
-    src: url(/assets/fonts/riogrande.woff);
+    src: url(../fonts/riogrande.woff);
+}
+@font-face{
+    font-family: riogrande-striped;
+    src: url(../fonts/riogrande_striped.woff);
+}
+body{
+    text-align: center;
 }
 h1{
     font-family: quentincaps;
+    font-size: 100px;
+    font-weight: lighter;
+}
+.subtitle{
+    font-family: riogrande-striped;
+    font-size: 50px;
+}
+.announcement{
+    font-family: riogrande;
+    font-size: 60px;
+}
+.text{
+    font-family: marlboro;
+    font-size: 40px;
 }
 .current-word{
-    letter-spacing: 10px;
-    font-size: 25px;
+    font-family: quentincaps;
+    font-size: 50px;
     color: blue;
-    font-weight: bold;
+    font-weight: lighter;
+}
+.spaced{
+    letter-spacing: 10px;
 }
 .lose{
     color: red;

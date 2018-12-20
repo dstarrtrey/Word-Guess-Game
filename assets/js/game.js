@@ -29,7 +29,7 @@ $(document).ready(function(){
             $("#num-guesses-left").text(`Guesses left: ${guessesLeft}`);
             $("#current-word").removeClass("new-game");
             $("#current-word").removeClass("lose");
-            $("#announcement").text("ALRIGHTY TEX, LET'S SEE WHAT YER' MADE OF!");
+            $("#announcement").text("ALRIGHTY TEX, LET'S SEE WHAT YER MADE OF!");
             console.log(myWord);
         }else{
             //Makes sure the letter hasn't been guessed already and is a letter
@@ -49,13 +49,13 @@ $(document).ready(function(){
                         $("#current-word").addClass("new-game");
                         $("#current-word-label").text("Press any key for a new word.");
                     }
-                    $("#announcement").text("WOOWEE! GOOD SHOOTIN'!");
+                    $("#announcement").text("WOOWEE! GOOD SHOOTIN!");
                 }else{
                     //If the user responds incorrectly
                     guessesLeft--;
                     $("#num-guesses-left").text(`Guesses left: ${guessesLeft}`);
                     if(guessesLeft > 0){
-                        $("#announcement").text("OUCH! WATCH WHERE YER' AIMIN' THAT THING, PARTNER!");
+                        $("#announcement").text("OUCH! WATCH WHERE YER AIMIN THAT THING, PARTNER!");
                     }else{
                         $("#announcement").text("THE JIG IS UP. DARN SHAME TOO, YOU HAD POTENTIAL.");
                         $("#current-word").addClass("new-game");
