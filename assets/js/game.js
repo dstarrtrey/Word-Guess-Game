@@ -18,7 +18,7 @@ $(document).ready(function(){
         wins: 0,
         guessesLeft: 0,
         wordBank: {
-            0: 'COWBOY', 1: 'RAGTIME', 2: 'SALOON', 3: 'BARFIGHT', 4: 'MUSTANG', 5: 'OUTLAW', 6: 'BUFFALO', 7: 'YODELER', 8: 'BRONCO', 9: 'COW', 10: 'RODEO', 11: 'STEER', 12: 'BUCKAROO', 13: 'SADDLE', 14: 'STEED', 15: 'LASSO', 16: 'STIRRUPS', 17: 'SPURS', 18: 'RANCH', 19: 'PISTOL',20: 'RAILROAD', 21: 'PONCHO', 22: 'REPUBLICAN', 23: 'BULLET'
+            0: 'COWBOY', 1: 'RAGTIME', 2: 'SALOON', 3: 'RUCKUS', 4: 'MUSTANG', 5: 'OUTLAW', 6: 'BUFFALO', 7: 'YODELER', 8: 'BRONCO', 9: 'COW', 10: 'RODEO', 11: 'STEER', 12: 'BUCKAROO', 13: 'SADDLE', 14: 'STEED', 15: 'LASSO', 16: 'STIRRUPS', 17: 'SPURS', 18: 'RANCH', 19: 'PISTOL',20: 'RAILROAD', 21: 'PONCHO', 22: 'REPUBLICAN', 23: 'BULLET'
         },
         newWordArr: function(){
             return this.wordBank[Math.floor(Math.random() * Object.keys(this.wordBank).length)].split("");
@@ -73,7 +73,7 @@ $(document).ready(function(){
                     if(this.current==="COW"||this.current==="COWBOY"||this.current==="STEER"||this.current==="RODEO"){
                         cows.play();
                     }
-                    if(this.current==="PISTOL"||this.current==="BARFIGHT"||this.current==="SALOON"||this.current==="OUTLAW"||this.current==="BULLET"||this.current==="REPUBLICAN"){
+                    if(this.current==="PISTOL"||this.current==="RUCKUS"||this.current==="SALOON"||this.current==="OUTLAW"||this.current==="BULLET"||this.current==="REPUBLICAN"){
                         gunFight.play();
                     }
                     spurs.play();
