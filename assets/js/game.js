@@ -20,7 +20,7 @@ $(document).ready(function(){
     function tumbleweedLoop() {
         $('#tumbleweed').css({left:0});
         $('#tumbleweed').animate ({
-            left: '+=89%',
+            left: '+=88%',
         }, 5000, 'linear', function() {
             tumbleweedLoop();
         });
