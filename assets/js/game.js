@@ -5,12 +5,19 @@ $(document).ready(function(){
     const guessesLeftDiv = $("#num-guesses-left");
     const announcement = $("#announcement");
     const winsDiv = $("#wins");
+    const neigh = new Audio("assets/sounds/neigh.wav");
+    const cows = new Audio("assets/sounds/cows.wav");
+    const spurs = new Audio("assets/sounds/spurs.wav");
+    const ricochet = new Audio("assets/sounds/ricochet.wav");
+    const gunshot = new Audio("assets/sounds/gunshot.wav");
+    const themeMusic = new Audio("assets/sounds/theme_music.wav");
+    const gunFight = new Audio("assets/sounds/gun_fight.wav");
     let myWord;
     let current="";
     let wins = 0;
     let guessesLeft;
     let lettersGuessed = "";
-    const wordBank = {0: 'COWBOY', 1: 'RAGTIME', 2: 'SALOON', 3: 'BARFIGHT', 4: 'MUSTANG', 5: 'OUTLAW', 6: 'BUFFALO', 7: 'YODELER', 8: 'BRONCO', 9: 'COW', 10: 'RODEO', 11: 'STEER', 12: 'BUCKAROO', 13: 'SADDLE', 14: 'STEED', 15: 'LASSO', 16: 'STIRRUPS', 17: 'SPURS', 18: 'RANCH', 19: 'PISTOL',20: 'RAILROAD', 21: 'PONCHO'};
+    const wordBank = {0: 'COWBOY', 1: 'RAGTIME', 2: 'SALOON', 3: 'BARFIGHT', 4: 'MUSTANG', 5: 'OUTLAW', 6: 'BUFFALO', 7: 'YODELER', 8: 'BRONCO', 9: 'COW', 10: 'RODEO', 11: 'STEER', 12: 'BUCKAROO', 13: 'SADDLE', 14: 'STEED', 15: 'LASSO', 16: 'STIRRUPS', 17: 'SPURS', 18: 'RANCH', 19: 'PISTOL',20: 'RAILROAD', 21: 'PONCHO', 22: 'REPUBLICAN', 23: 'BULLET'};
     const newWordArr = () => wordBank[Math.floor(Math.random() * Object.keys(wordBank).length)].split("");    
     const setCharAt = (str,index,chr) => {
         if(index > str.length-1) return str;
@@ -27,6 +34,7 @@ $(document).ready(function(){
     }    
     tumbleweedLoop();
     document.onkeyup = function(event){
+        themeMusic.play();
         const input = event.key.toUpperCase();
         //Generates a new word
         if(currentDiv.hasClass("new-game")){
@@ -52,6 +60,7 @@ $(document).ready(function(){
                 lettersGuessed+=input;
                 lettersGuessedDiv.text(lettersGuessed);
                 if(myWord.includes(input)){
+                    gunshot.play();
                     while(myWord.includes(input)){
                         current = setCharAt(current, myWord.indexOf(input), input);
                         myWord[myWord.indexOf(input)] = false;
@@ -59,6 +68,16 @@ $(document).ready(function(){
                     currentDiv.text(current);
                     //When user wins, run code: 
                     if(!current.includes("_")){
+                        if(current==="STEED"||current==="MUSTANG"||current==="BRONCO"){
+                            neigh.play();
+                        }
+                        if(current==="COW"||current==="COWBOY"||current==="STEER"||current==="RODEO"){
+                            cows.play();
+                        }
+                        if(current==="PISTOL"||current==="BARFIGHT"||current==="SALOON"||current==="OUTLAW"||current==="BULLET"||current==="REPUBLICAN"){
+                            gunFight.play();
+                        }
+                        spurs.play();
                         wins++;
                         winsDiv.text(`Wins: ${wins}`);
                         currentDiv.addClass("new-game");
@@ -68,6 +87,7 @@ $(document).ready(function(){
                 }else{
                     //If the user responds incorrectly
                     guessesLeft--;
+                    ricochet.play();
                     guessesLeftDiv.text(`Guesses left: ${guessesLeft}`);
                     if(guessesLeft > 0){
                         announcement.text("OUCH! WATCH WHERE YER AIMIN THAT THING, PARTNER!");
