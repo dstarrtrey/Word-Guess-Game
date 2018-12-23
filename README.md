@@ -1,5 +1,5 @@
 # Wild West Word Guess Game
-##A fun hangman-like game with a cowboy theme
+## A fun hangman-like game with a cowboy theme
 
 To play this game, 
 1. Press any key to begin.
