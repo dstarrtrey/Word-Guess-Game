@@ -14,8 +14,19 @@
     font-family: riogrande-striped;
     src: url(../fonts/riogrande_striped.woff);
 }
+html{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/paper-68833_1280.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 body{
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: transparent;
 }
 h1{
     font-family: quentincaps;
@@ -45,4 +56,98 @@ h1{
 }
 .lose{
     color: red;
+}
+.col-md-6{
+    text-align: center;
+}
+.tumbleweed{
+    position:absolute;
+    z-index:-1;
+    left:0%;
+    bottom: 10%;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite; 
+}
+.cowboy{
+    -webkit-animation: cowboy 1s linear infinite;
+    -moz-animation: cowboy 1s linear infinite;
+    -ms-animation: cowboy 1s linear infinite;
+    -o-animation: cowboy 1s linear infinite;
+    animation: cowboy 1s linear infinite; 
+}
+
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes cowboy /* Safari and Chrome */ {
+    0% {
+        -webkit-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    50% {
+        -webkit-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+    100%{
+        -webkit-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+}
+@keyframes cowboy {
+    0% {
+        -ms-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
+    50% {
+        -ms-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+    100%{
+        -ms-transform: rotate(-30deg);
+        -moz-transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+        -o-transform: rotate(-30deg);
+        transform: rotate(-30deg);
+    }
 }

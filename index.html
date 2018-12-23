@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
         
     </head>
@@ -18,16 +18,47 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h1>WILD WEST WORD GUESS GAME</h1>
-        <h2 class="subtitle">Throw down your hoedown with a test of your rootin n tootin lexicon</h2>
-        <div class="text" id="wins"></div>
-        <div class="text" id="current-word-label">Press any key to get started</div>
-        <div class="new-game current-word spaced" id="current-word" ></div>
-        <div class="text" id="num-guesses-left"></div>
-        <div class="text">Letters already guessed</div>
-        <div class="text spaced" id="letters-guessed"></div>
-        <h2 class="announcement" id="announcement">YEE HAW</h2>
-        <iframe src="https://giphy.com/embed/GCQkdDGJ2NHXi" width="480" height="204" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <div class="container-fluid">
+            <h1>WILD WEST WORD GUESS GAME</h1>
+            <h2 class="subtitle">Throw down your hoedown with a test of your rootin n tootin lexicon</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/images/cool-cowboy.jpg" width="75%">
+                </div>
+                <div class="col-md-4">
+                    <div class="text" id="wins"></div>
+                    <div class="text" id="current-word-label">Press any key to get started</div>
+                    <div class="new-game current-word spaced" id="current-word" ></div>
+                    <div class="text" id="num-guesses-left"></div>
+                    <div class="text">Letters already guessed</div>
+                    <div class="text spaced" id="letters-guessed"> </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <img src="assets/images/real-cowboy.jpg" width="100%">
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="announcement" id="announcement">YEE HAW</h2>
+                </div>
+                <div class="col-md-4">
+                    <iframe src="https://giphy.com/embed/GCQkdDGJ2NHXi" width="100%" height="204" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <img class="cowboy" id="cowboy" src="assets/images/cowboy.png" width="100%">
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <img class="tumbleweed" id="tumbleweed" src="assets/images/tumbleweed.png" width="10%">
+            
+        </div>
         <script src="assets/js/game.js" async defer></script>
     </body>
 </html>
