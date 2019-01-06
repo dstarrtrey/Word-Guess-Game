@@ -35,7 +35,7 @@ $(document).ready(function(){
         $('#tumbleweed').animate ({
             left: '+=88%',
         }, 5000, 'linear', function() {
-            GAME.tumbleweedLoop();
+            tumbleweedLoop();
         });
     };
     const newGame = () => {
